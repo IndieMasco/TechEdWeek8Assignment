@@ -7,7 +7,7 @@ If there is anything you think I could do better or improve on, I'd be happy to 
 # Requirements
 
 - 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
-- 🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
+- ✅ 🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
   - Please submit your database schema, as is mentioned in the submission instructions.
 - 🎯 Create a delete button on posts that allows users to delete the post from the database.
 - 🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.

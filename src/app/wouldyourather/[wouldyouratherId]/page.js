@@ -3,18 +3,40 @@
 
 import { db } from "@/utils/dbConnection";
 
-export default async function WouldYouRatherPageIdPage({ params }) {
-  const wouldyouratherId = await params.wouldyouratherId;
+export default async function WouldyouRatherPage({ params }) {
+  const wouldyouratherId = params.wouldyouratherId;
 
-  const query = await db.query(
-    `SELECT id, question FROM rather WHERE id = ${wouldyouratherId}`
+  // Question
+  const ratherQuery = await db.query(
+    "SELECT id, question FROM rather WHERE id = $1",
+    [wouldyouratherId]
   );
+  const rather = ratherQuery.rows[0];
 
-  const rather = query.rows[0];
+  // Comments
+  const commentsQuery = await db.query(
+    "SELECT id, name, comment FROM comment WHERE question_id = $1 ORDER BY id desc",
+    [wouldyouratherId]
+  );
+  const comments = commentsQuery.rows;
 
   return (
-    <div>
-      <h2>{rather.question}</h2>
-    </div>
+    <>
+      <h1>{rather.question}</h1>
+      <div>
+        <h2>Comments</h2>
+        {comments.length > 0 ? (
+          <ul>
+            {comments.map((comment) => (
+              <li key={comment.id}>
+                <strong>{comment.name}:</strong> {comment.comment}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          NULL
+        )}
+      </div>
+    </>
   );
 }
