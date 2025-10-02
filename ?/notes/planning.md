@@ -1,4 +1,4 @@
-# Tips for a successful planning stage
+# Manny's tips for a successful planning stage
 
 ## Draw your wireframe
 
