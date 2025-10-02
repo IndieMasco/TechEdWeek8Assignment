@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Reflection
 
-## Getting Started
+...
 
-First, run the development server:
+If there is anything you think I could do better or improve on, I'd be happy to listen and learn from what you have to say.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Requirements
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🎯 Display all posts on the page, with an option to sort them in ascending or descending order.
+- 🎯 Create a SQL schema for a posts table and a comments table, with the comments being connected to the posts table with a foreign key.
+  - Please submit your database schema, as is mentioned in the submission instructions.
+- 🎯 Create a delete button on posts that allows users to delete the post from the database.
+- 🎯 Create a form which saves comments to a dedicated comments table, with the comments being connected to the posts table with a foreign key.
+- 🎯 Allow users to comment on individual posts in their dynamic routes. Comments should be associated with posts, and have a dynamic route (e.g. `/posts/:postid`).
+- 🎯 Add a `redirect` when a user creates a post to redirect them to the posts page.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Stretch Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🏹 Implement a `select` input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as `/categories` and `/categories/:id` to enable users to browse and interact with posts by category.
+🏹 Create an edit functionality accessible via `/posts/:id/edit`, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
+🏹 Develop an edit comment feature accessible via `/posts/:id/comments/:id/edit`, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
 
-## Learn More
+# requirements that I wasn't able to achieve
 
-To learn more about Next.js, take a look at the following resources:
+...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Wireframe
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+...
 
-## Deploy on Vercel
+# Errors or Bugs I Encountered
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+...
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# What went really well and what could have gone better?
+
+...
+
+# External sources
+
+### Info
+
+[My own repo](https://github.com/IndieMasco/TechEdSoftwareDeveloper021) , [Tech Ed repo](https://github.com/Tech-Educators/software-dev-021) , [FigJam](https://www.figma.com/board/JjN2Zgtoynrau06MjWJs6q/SD021?node-id=0-1&p=f&t=V1WCGcrmVKnoxJDr-0) , [MDN](https://developer.mozilla.org/en-US/) , [W3School](https://www.w3schools.com/) , [Template](https://github.com/Tech-Educators/software-dev-021/blob/main/demos/week6/week6-assignment/src/App.jsx)
