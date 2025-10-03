@@ -1,7 +1,7 @@
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistMono.variable} antialiased`}>
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

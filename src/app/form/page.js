@@ -34,56 +34,58 @@ export default async function FormPage() {
 
   return (
     <>
-      <form action={handleSubmit} className="form-container">
-        <fieldset className="form-fieldset">
-          <legend className="form-legend">Question</legend>
-          <label htmlFor="question_id" className="form-label">
-            Would you rather:
-          </label>
-          <select
-            id="question_id"
-            name="question_id"
-            required
-            className="form-select"
-          >
-            {questions.map((q) => (
-              <option key={q.id} value={q.id}>
-                {q.question}
-              </option>
-            ))}
-          </select>
-        </fieldset>
+      <div className="main-content">
+        <form action={handleSubmit} className="form-container">
+          <fieldset className="form-fieldset">
+            <legend className="form-legend">Question</legend>
+            <label htmlFor="question_id" className="form-label">
+              Would you rather:
+            </label>
+            <select
+              id="question_id"
+              name="question_id"
+              required
+              className="form-select"
+            >
+              {questions.map((q) => (
+                <option key={q.id} value={q.id}>
+                  {q.question}
+                </option>
+              ))}
+            </select>
+          </fieldset>
 
-        <fieldset className="form-fieldset">
-          <legend className="form-legend">Answer</legend>
-          <label htmlFor="name" className="form-label">
-            Name:{" "}
-          </label>
-          <input
-            type="text"
-            name="name"
-            required
-            maxLength={255}
-            placeholder="Yuki"
-            className="form-input"
-          />
-          <label htmlFor="comment" className="form-label">
-            Answer:{" "}
-          </label>
-          <textarea
-            type="text"
-            name="comment"
-            required
-            minLength={1}
-            maxLength={255}
-            placeholder="I would rather ........"
-            className="form-textarea"
-          />
-        </fieldset>
-        <button type="submit" className="form-button">
-          Submit
-        </button>
-      </form>
+          <fieldset className="form-fieldset">
+            <legend className="form-legend">Answer</legend>
+            <label htmlFor="name" className="form-label">
+              Name:{" "}
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              maxLength={255}
+              placeholder="Yuki"
+              className="form-input"
+            />
+            <label htmlFor="comment" className="form-label">
+              Answer:{" "}
+            </label>
+            <textarea
+              type="text"
+              name="comment"
+              required
+              minLength={1}
+              maxLength={255}
+              placeholder="I would rather ........"
+              className="form-textarea"
+            />
+          </fieldset>
+          <button type="submit" className="form-button">
+            Submit
+          </button>
+        </form>
+      </div>
     </>
   );
 }

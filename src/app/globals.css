@@ -2,10 +2,24 @@
 
 /* === Basic === */
 
+html,
+body,
 :root {
-  background-color: green;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #588157;
   color: black;
   --font-mono: var(--font-geist-mono);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 /* === Header.jsx === */
@@ -15,9 +29,9 @@
   align-items: center;
   justify-content: space-between;
   background-color: black;
-  color: white;
-  padding: 10px;
-  border-bottom: 1px solid white;
+  color: #fff;
+  padding: 5px;
+  border-bottom: 2px solid #fff;
 }
 
 .title-logo {
@@ -28,34 +42,33 @@
 .header-logo {
   border-radius: 100px;
   width: auto;
-  height: 55px;
+  height: 60px;
   margin-left: 10px;
 }
 
 .header-title {
-  padding-left: 50px;
+  padding-left: 30px;
   font-size: 3rem;
 }
 
 .header-nav {
-  color: white;
   padding-right: 15px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .header-nav:hover {
-  color: green;
+  color: #588157;
 }
 
 /* === home page.js === */
 
 .home-title {
   text-align: center;
-  color: white;
+  color: #fff;
   font-size: 2.4rem;
   margin-top: 30px;
-  margin-bottom: 20px;
-  border: 2px solid white;
+  margin-bottom: 30px;
+  border: 2px solid #fff;
   background-color: black;
   padding: 15px;
   width: 70%;
@@ -70,76 +83,92 @@
   width: 70%;
   margin: 0 auto;
   padding: 20px;
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: black;
-  color: green;
+  color: #fff;
   border-radius: 10px;
 }
 
 .home-jar {
-  border: 2px solid green;
+  border: 2px solid #588157;
   border-radius: 10px;
 }
 
 .home-text {
-  color: white;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.5em;
   line-height: 1.7;
-  margin: 15px;
+  margin: 20px;
 }
 
 /* === wouldyourather page.js === */
 
+.a {
+  margin-top: 15px;
+}
+
 .a-z,
 .z-a {
+  padding: 8px 10px;
   margin-left: 10px;
   margin-right: 10px;
+  border: 2px solid #fff;
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
 }
 
 .question-container {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: black;
-  color: white;
+  color: #fff;
   width: 50%;
   margin: 0 auto;
   margin-bottom: 10px;
-  padding: 10px 10px;
+  padding: 15px 15px;
+  border-radius: 10px;
 }
 
 .question-text {
+  display: flex;
+  font-size: 1.3rem;
   text-align: center;
+  justify-content: center;
 }
 
 /* === [wouldyouratherId] page.js === */
 
 .comment-title1 {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: black;
-  color: white;
-  width: 50%;
+  color: #fff;
+  width: 70%;
   margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
   text-align: center;
+  font-size: 2.4rem;
+  border-radius: 10px;
 }
 
 .comment-container {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: black;
-  color: white;
-  width: 50%;
+  color: #fff;
+  width: 65%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .comment-title2 {
-  color: white;
+  color: #fff;
+  font-size: 1.7rem;
   text-align: center;
   margin-bottom: 15px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid green;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #588157;
 }
 
 .comment-card ul {
@@ -149,33 +178,33 @@
 }
 
 .comment-card ul li {
-  background-color: black;
-  border: 2px solid white;
-  padding: 10px;
+  border: 2px solid #fff;
+  padding: 15px 15px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
+  font-size: 1.3rem;
 }
 
 .comment-delete {
-  background-color: red;
-  color: white;
+  background-color: #588157;
+  color: #fff;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 10px;
-  font-size: 0.8em;
+  font-size: 1rem;
 }
 
 .comment-delete:hover {
-  background-color: darkred;
+  background-color: #344e41;
 }
 
 /* === form page.js === */
 
 .form-container {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background-color: black;
   width: 70%;
   margin: 0 auto;
@@ -184,40 +213,41 @@
   flex-direction: column;
   gap: 20px;
   border-radius: 10px;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 .form-fieldset {
-  border: 1px solid white;
+  border: 2px solid #fff;
   padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: white;
+  color: #fff;
 }
 
 .form-legend {
-  color: white;
-  font-size: 1.1em;
+  color: #fff;
+  font-size: 1.7rem;
   padding: 10px;
   font-weight: bold;
 }
 
 .form-label {
   margin-top: 5px;
-  color: white;
+  color: #fff;
+  font-size: 1.3rem;
 }
 
 .form-input,
 .form-select,
 .form-textarea {
   background-color: #333;
-  color: white;
-  border: 1px solid green;
+  color: #fff;
+  border: 2px solid #588157;
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .form-textarea {
@@ -226,39 +256,58 @@
 }
 
 .form-button {
-  background-color: green;
+  background-color: #588157;
   color: black;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 10px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
+  width: 30%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .form-button:hover {
-  background-color: darkgreen;
-  color: white;
+  background-color: #344e41;
+  color: #fff;
 }
 
 /* === Footer.jsx === */
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: white;
-  padding: 10px 10px;
+  align-items: center;
   text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  color: #fff;
+  padding: 15px 10px;
+  border-top: 2px solid #fff;
   width: 100%;
-  border-top: 1px solid white;
 }
 
 .footer-text {
+  display: flex;
+  text-align: center;
   font-size: 1rem;
-  margin-bottom: 5px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .footer-links a {
-  margin-right: 10px;
-  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #588157;
+  text-decoration: underline;
 }

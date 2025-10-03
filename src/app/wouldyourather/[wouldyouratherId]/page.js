@@ -29,34 +29,40 @@ export default async function WouldyouRatherIdPage({ params }) {
 
   return (
     <>
-      <h2 className="comment-title1">{rather.question}</h2>
-      <div className="comment-container">
-        <h3 className="comment-title2">Comments</h3>
-        <div className="comment-card">
-          {comments.length > 0 ? (
-            <ul>
-              {comments.map((comment) => (
-                <li key={comment.id}>
-                  <p>
-                    <strong>{comment.name}:</strong> {comment.comment}
-                  </p>
-                  <form action={deleteCommentAction}>
-                    <input type="hidden" name="commentId" value={comment.id} />
-                    <input
-                      type="hidden"
-                      name="ratherId"
-                      value={wouldyouratherId}
-                    />
-                    <button className="comment-delete" type="submit">
-                      Delete
-                    </button>
-                  </form>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            NULL
-          )}
+      <div className="main-content">
+        <h2 className="comment-title1">{rather.question}</h2>
+        <div className="comment-container">
+          <h3 className="comment-title2">Comments</h3>
+          <div className="comment-card">
+            {comments.length > 0 ? (
+              <ul>
+                {comments.map((comment) => (
+                  <li key={comment.id}>
+                    <p>
+                      <strong>{comment.name}:</strong> {comment.comment}
+                    </p>
+                    <form action={deleteCommentAction}>
+                      <input
+                        type="hidden"
+                        name="commentId"
+                        value={comment.id}
+                      />
+                      <input
+                        type="hidden"
+                        name="ratherId"
+                        value={wouldyouratherId}
+                      />
+                      <button className="comment-delete" type="submit">
+                        Delete
+                      </button>
+                    </form>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              NULL
+            )}
+          </div>
         </div>
       </div>
     </>
