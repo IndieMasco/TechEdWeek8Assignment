@@ -289,15 +289,9 @@ body {
   width: 100%;
 }
 
-.footer-text {
-  display: flex;
-  text-align: center;
-  font-size: 1rem;
-}
-
 .footer-links {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   font-size: 1.2rem;
   font-weight: 700;
 }
