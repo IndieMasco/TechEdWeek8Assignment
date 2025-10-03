@@ -1,7 +1,7 @@
 export default function HomePage() {
   return (
     <>
-      <h1>THIS IS MY HOME PAGE</h1>
+      <h1 className="home-title">Welcome to the pickle jar</h1>
     </>
   );
 }

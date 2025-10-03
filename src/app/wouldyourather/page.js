@@ -17,19 +17,27 @@ export default async function WouldYouRatherPage({ searchParams }) {
   const currentPath = "/wouldyourather";
 
   return (
-    <div>
-      <Link href={`${currentPath}?sort=asc`}>Sort by (A-Z) </Link>
-      <Link href={`${currentPath}?sort=desc`}>Sort by (Z-A)</Link>
-
+    <>
+      <div className="a-z-constainer">
+        <Link className="a-z" href={`${currentPath}?sort=asc`}>
+          Sort by (A-Z){" "}
+        </Link>
+        <Link className="z-a" href={`${currentPath}?sort=desc`}>
+          Sort by (Z-A)
+        </Link>
+      </div>
       {rather.map((wouldYouRather) => {
         return (
-          <div key={wouldYouRather.id}>
-            <Link href={`/wouldyourather/${wouldYouRather.id}`}>
+          <div className="question-container" key={wouldYouRather.id}>
+            <Link
+              className="question-text"
+              href={`/wouldyourather/${wouldYouRather.id}`}
+            >
               {wouldYouRather.question}
             </Link>
           </div>
         );
       })}
-    </div>
+    </>
   );
 }

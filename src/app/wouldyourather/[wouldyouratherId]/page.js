@@ -1,4 +1,16 @@
 import { db } from "@/utils/dbConnection";
+import { revalidatePath } from "next/cache";
+
+async function deleteCommentAction(formData) {
+  "use server";
+
+  const commentId = formData.get("commentId");
+  const ratherId = formData.get("ratherId");
+
+  await db.query(`DELETE FROM comment WHERE id = $1`, [commentId]);
+
+  revalidatePath(`/wouldyourather/${ratherId}`);
+}
 
 export default async function WouldyouRatherPage({ params }) {
   const wouldyouratherId = params.wouldyouratherId;
@@ -17,20 +29,33 @@ export default async function WouldyouRatherPage({ params }) {
 
   return (
     <>
-      <h1>{rather.question}</h1>
-      <div>
-        <h2>Comments</h2>
-        {comments.length > 0 ? (
-          <ul>
-            {comments.map((comment) => (
-              <li key={comment.id}>
-                <strong>{comment.name}:</strong> {comment.comment}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          NULL
-        )}
+      <h1 className="comment-title1">{rather.question}</h1>
+      <div className="comment-container">
+        <h2 className="comment-title2">Comments</h2>
+        <div className="comment-card">
+          {comments.length > 0 ? (
+            <ul>
+              {comments.map((comment) => (
+                <li key={comment.id}>
+                  <strong>{comment.name}:</strong> {comment.comment}
+                  <form action={deleteCommentAction}>
+                    <input type="hidden" name="commentId" value={comment.id} />
+                    <input
+                      type="hidden"
+                      name="ratherId"
+                      value={wouldyouratherId}
+                    />
+                    <button className="comment-delete" type="submit">
+                      Delete
+                    </button>
+                  </form>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            NULL
+          )}
+        </div>
       </div>
     </>
   );
