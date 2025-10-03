@@ -1,7 +1,7 @@
 # Reflection
 
 - as weeks go by the info is slowly starting to stick
-- Next.js
+- working with Next.js
 - using trello
 - trying out different colours for styling
 
@@ -28,10 +28,6 @@ If there is anything you think I could do better or improve on, I'd be happy to 
 - 🏹 Implement a `select` input (or similar mechanism) that allows users to categorise posts during creation, storing them in their own table in the database. Ensure appropriate routing for categories, with endpoints such as `/categories` and `/categories/:id` to enable users to browse and interact with posts by category.
 
 # Wireframe
-
-...
-
-# Errors or Bugs I Encountered
 
 ...
 
