@@ -5,8 +5,9 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/wouldyourather"}>Would You Rather?</Link>
+        <Link href={"/"}>Home </Link>
+        <Link href={"/form"}>Form </Link>
+        <Link href={"/wouldyourather"}>Comments</Link>
       </nav>
     </header>
   );

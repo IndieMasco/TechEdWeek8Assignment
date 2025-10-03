@@ -6,14 +6,12 @@ import { db } from "@/utils/dbConnection";
 export default async function WouldyouRatherPage({ params }) {
   const wouldyouratherId = params.wouldyouratherId;
 
-  // Question
   const ratherQuery = await db.query(
     "SELECT id, question FROM rather WHERE id = $1",
     [wouldyouratherId]
   );
   const rather = ratherQuery.rows[0];
 
-  // Comments
   const commentsQuery = await db.query(
     "SELECT id, name, comment FROM comment WHERE question_id = $1 ORDER BY id desc",
     [wouldyouratherId]
