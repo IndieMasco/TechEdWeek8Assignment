@@ -1,11 +1,10 @@
-import { Geist_Mono } from "next/font/google";
+import { Merienda } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const geistMono = Merienda({
+  weight: "400",
 });
 
 export const metadata = {
@@ -16,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} antialiased`}>
+      <body className={`${geistMono.className}`}>
         <Header />
         {children}
         <Footer />
