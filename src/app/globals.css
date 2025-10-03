@@ -223,6 +223,7 @@ body {
   flex-direction: column;
   gap: 10px;
   color: #fff;
+  max-width: 100%;
 }
 
 .form-legend {
@@ -248,6 +249,8 @@ body {
   margin-bottom: 10px;
   border-radius: 10px;
   font-size: 1.3rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 .form-textarea {
