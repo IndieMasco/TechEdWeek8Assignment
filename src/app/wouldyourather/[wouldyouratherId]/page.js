@@ -12,7 +12,7 @@ async function deleteCommentAction(formData) {
   revalidatePath(`/wouldyourather/${ratherId}`);
 }
 
-export default async function WouldyouRatherPage({ params }) {
+export default async function WouldyouRatherIdPage({ params }) {
   const wouldyouratherId = params.wouldyouratherId;
 
   const ratherQuery = await db.query(
@@ -29,15 +29,17 @@ export default async function WouldyouRatherPage({ params }) {
 
   return (
     <>
-      <h1 className="comment-title1">{rather.question}</h1>
+      <h2 className="comment-title1">{rather.question}</h2>
       <div className="comment-container">
-        <h2 className="comment-title2">Comments</h2>
+        <h3 className="comment-title2">Comments</h3>
         <div className="comment-card">
           {comments.length > 0 ? (
             <ul>
               {comments.map((comment) => (
                 <li key={comment.id}>
-                  <strong>{comment.name}:</strong> {comment.comment}
+                  <p>
+                    <strong>{comment.name}:</strong> {comment.comment}
+                  </p>
                   <form action={deleteCommentAction}>
                     <input type="hidden" name="commentId" value={comment.id} />
                     <input

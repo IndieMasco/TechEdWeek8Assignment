@@ -34,12 +34,18 @@ export default async function FormPage() {
 
   return (
     <>
-      <h1>WOULD YOU RATHER!</h1>
-      <form action={handleSubmit}>
-        <fieldset>
-          <legend>Question</legend>
-          <label htmlFor="question_id">Would you rather:</label>
-          <select id="question_id" name="question_id" required>
+      <form action={handleSubmit} className="form-container">
+        <fieldset className="form-fieldset">
+          <legend className="form-legend">Question</legend>
+          <label htmlFor="question_id" className="form-label">
+            Would you rather:
+          </label>
+          <select
+            id="question_id"
+            name="question_id"
+            required
+            className="form-select"
+          >
             {questions.map((q) => (
               <option key={q.id} value={q.id}>
                 {q.question}
@@ -48,17 +54,22 @@ export default async function FormPage() {
           </select>
         </fieldset>
 
-        <fieldset>
-          <legend>Answer</legend>
-          <label htmlFor="name">Name: </label>
+        <fieldset className="form-fieldset">
+          <legend className="form-legend">Answer</legend>
+          <label htmlFor="name" className="form-label">
+            Name:{" "}
+          </label>
           <input
             type="text"
             name="name"
             required
             maxLength={255}
             placeholder="Yuki"
+            className="form-input"
           />
-          <label htmlFor="comment">Answer: </label>
+          <label htmlFor="comment" className="form-label">
+            Answer:{" "}
+          </label>
           <textarea
             type="text"
             name="comment"
@@ -66,9 +77,12 @@ export default async function FormPage() {
             minLength={1}
             maxLength={255}
             placeholder="I would rather ........"
+            className="form-textarea"
           />
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit" className="form-button">
+          Submit
+        </button>
       </form>
     </>
   );

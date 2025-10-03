@@ -1,7 +1,264 @@
 @import "tailwindcss";
 
+/* === Basic === */
+
 :root {
-  background-color: #edf2f4;
-  color: #2b2d42;
+  background-color: green;
+  color: black;
   --font-mono: var(--font-geist-mono);
+}
+
+/* === Header.jsx === */
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.title-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  border-radius: 100px;
+  width: auto;
+  height: 55px;
+  margin-left: 10px;
+}
+
+.header-title {
+  padding-left: 50px;
+  font-size: 3rem;
+}
+
+.header-nav {
+  color: white;
+  padding-right: 15px;
+  font-size: 1.2rem;
+}
+
+.header-nav:hover {
+  color: green;
+}
+
+/* === home page.js === */
+
+.home-title {
+  text-align: center;
+  color: white;
+  font-size: 2.4rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 2px solid white;
+  background-color: black;
+  padding: 15px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid white;
+  background-color: black;
+  color: green;
+  border-radius: 10px;
+}
+
+.home-jar {
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+.home-text {
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin: 15px;
+}
+
+/* === wouldyourather page.js === */
+
+.a-z,
+.z-a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.question-container {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+}
+
+.question-text {
+  text-align: center;
+}
+
+/* === [wouldyouratherId] page.js === */
+
+.comment-title1 {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.comment-container {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.comment-title2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid green;
+}
+
+.comment-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment-card ul li {
+  background-color: black;
+  border: 2px solid white;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.comment-delete {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.comment-delete:hover {
+  background-color: darkred;
+}
+
+/* === form page.js === */
+
+.form-container {
+  border: 2px solid white;
+  background-color: black;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 90px;
+}
+
+.form-fieldset {
+  border: 1px solid white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+.form-legend {
+  color: white;
+  font-size: 1.1em;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.form-label {
+  margin-top: 5px;
+  color: white;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background-color: #333;
+  color: white;
+  border: 1px solid green;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-button {
+  background-color: green;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.form-button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+/* === Footer.jsx === */
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  margin-right: 10px;
+  margin-left: 10px;
 }
