@@ -555,10 +555,11 @@ body {
 
   /* === Footer.jsx === */
 
+  .footer-container {
+    display: none;
+  }
+
   .footer-links {
-    flex-direction: column;
-    gap: 5px;
-    font-size: 1rem;
-    font-weight: 500;
+    display: none;
   }
 }
