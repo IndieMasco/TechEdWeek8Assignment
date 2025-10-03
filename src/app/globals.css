@@ -414,3 +414,151 @@ body {
   color: #588157;
   text-decoration: underline;
 }
+
+/* === Mobile === */
+
+@media (max-width: 800px) {
+  /* === Header.jsx === */
+
+  .header-logo {
+    height: 50px;
+    margin-left: 5px;
+  }
+
+  .header-title {
+    margin-left: 15px;
+    font-size: 2rem;
+  }
+
+  .header-nav {
+    padding-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  /* === home page.js === */
+
+  .home-title {
+    font-size: 1.8rem;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .home-container {
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .home-jar {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .home-text {
+    font-size: 1.2em;
+    margin: 10px;
+  }
+
+  /* === wouldyourather page.js === */
+
+  .question-container {
+    width: 90%;
+    padding: 10px 10px;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .a-z,
+  .z-a {
+    display: none;
+  }
+
+  /* === [wouldyouratherId] page.js === */
+
+  .comment-title1 {
+    font-size: 1.8rem;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .comment-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .comment-title2 {
+    font-size: 1.4rem;
+  }
+
+  .comment-card ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .comment-actions {
+    margin-top: 10px;
+    gap: 5px;
+  }
+
+  .comment-edit,
+  .comment-delete {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  /* === form page.js and edit page.js === */
+
+  .form-container,
+  .edit-container {
+    width: 90%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .edit-title {
+    font-size: 1.8rem;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form-legend,
+  .edit-legend {
+    font-size: 1.4rem;
+  }
+
+  .form-label,
+  .edit-label {
+    font-size: 1.1rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .edit-input,
+  .edit-textarea {
+    font-size: 1.1rem;
+  }
+
+  .form-button,
+  .edit-button {
+    width: 50%;
+    font-size: 1.1em;
+  }
+
+  /* === Footer.jsx === */
+
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

@@ -21,6 +21,7 @@ If there is anything you think I could do better or improve on, I'd be happy to 
 
 - ✅ 🏹 Create an edit functionality accessible via `/posts/:id/edit`, which pre-fills a form for post data. Create a working PUT route to update the post in the database.
 - ✅ 🏹 Develop an edit comment feature accessible via `/posts/:id/comments/:id/edit`, which pre-fills a form for comment data. Create a working PUT route to update the comment in the database.
+  - `docs/MannySaidItCounts.png`
 
 # requirements that I wasn't able to achieve
 
