@@ -16,13 +16,13 @@ export default function HomePage() {
             height={200}
           />
           <p className="home-text">
-            Step right up and test your decision-making skills in The Pickle
-            Jar—your new favorite spot for the classic Would You Rather? game!
+            Step right up and test your decision-making skills in The Pickle Jar
+            your new favorite spot for the classic Would You Rather game!
             <br />
             <br />
-            Weve bottled up a collection of the toughest, funniest, and most
-            bizarre dilemmas just for you. Every question is a chance to dive
-            into an intriguing hypothetical and see where you stand.{" "}
+            We&apos;ve bottled up a collection of the toughest, funniest, and
+            most bizarre dilemmas just for you. Every question is a chance to
+            dive into an intriguing hypothetical and see where you stand.{" "}
           </p>
         </div>
       </div>
