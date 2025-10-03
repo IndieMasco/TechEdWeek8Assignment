@@ -188,6 +188,28 @@ body {
   font-size: 1.3rem;
 }
 
+.comment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-edit {
+  background-color: #588157;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-edit:hover {
+  background-color: #344e41;
+}
+
 .comment-delete {
   background-color: #588157;
   color: #fff;
@@ -273,6 +295,90 @@ body {
 }
 
 .form-button:hover {
+  background-color: #344e41;
+  color: #fff;
+}
+
+/* === edit page.js === */
+
+.edit-title {
+  border: 2px solid #fff;
+  background-color: black;
+  color: #fff;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  text-align: center;
+  font-size: 2.4rem;
+  border-radius: 10px;
+}
+
+.edit-container {
+  border: 2px solid #fff;
+  background-color: black;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.edit-fieldset {
+  border: 2px solid #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  max-width: 100%;
+}
+
+.edit-legend {
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.edit-label {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.edit-input,
+.edit-textarea {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #588157;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+.edit-button {
+  background-color: #588157;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 30%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.edit-button:hover {
   background-color: #344e41;
   color: #fff;
 }

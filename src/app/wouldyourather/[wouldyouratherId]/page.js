@@ -1,5 +1,6 @@
 import { db } from "@/utils/dbConnection";
 import { revalidatePath } from "next/cache";
+import Link from "next/link"; // <-- NEW IMPORT
 
 async function deleteCommentAction(formData) {
   "use server";
@@ -41,21 +42,29 @@ export default async function WouldyouRatherIdPage({ params }) {
                     <p>
                       <strong>{comment.name}:</strong> {comment.comment}
                     </p>
-                    <form action={deleteCommentAction}>
-                      <input
-                        type="hidden"
-                        name="commentId"
-                        value={comment.id}
-                      />
-                      <input
-                        type="hidden"
-                        name="ratherId"
-                        value={wouldyouratherId}
-                      />
-                      <button className="comment-delete" type="submit">
-                        Delete
-                      </button>
-                    </form>
+                    <div className="comment-actions">
+                      <Link
+                        href={`/wouldyourather/${wouldyouratherId}/edit?commentId=${comment.id}`}
+                        className="comment-edit"
+                      >
+                        Edit
+                      </Link>
+                      <form action={deleteCommentAction}>
+                        <input
+                          type="hidden"
+                          name="commentId"
+                          value={comment.id}
+                        />
+                        <input
+                          type="hidden"
+                          name="ratherId"
+                          value={wouldyouratherId}
+                        />
+                        <button className="comment-delete" type="submit">
+                          Delete
+                        </button>
+                      </form>
+                    </div>
                   </li>
                 ))}
               </ul>

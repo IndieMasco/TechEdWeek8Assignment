@@ -58,7 +58,7 @@ export default async function FormPage() {
           <fieldset className="form-fieldset">
             <legend className="form-legend">Answer</legend>
             <label htmlFor="name" className="form-label">
-              Name:{" "}
+              Name:
             </label>
             <input
               type="text"
@@ -69,7 +69,7 @@ export default async function FormPage() {
               className="form-input"
             />
             <label htmlFor="comment" className="form-label">
-              Answer:{" "}
+              Answer:
             </label>
             <textarea
               type="text"
