@@ -1,4 +1,3 @@
-//TODO: set up the navigation in here
 import Link from "next/link";
 
 export default function Header() {

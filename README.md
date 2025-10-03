@@ -1,5 +1,6 @@
 # Reflection
 
+- Next.js
 - using trello
 - trying out different colours for styling
 

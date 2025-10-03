@@ -1,6 +1,3 @@
-//TODO: get the individual post data from the database
-//TODO: implement a delete action to delete comments
-
 import { db } from "@/utils/dbConnection";
 
 export default async function WouldyouRatherPage({ params }) {
