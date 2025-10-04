@@ -60,7 +60,9 @@ If there is anything you think I could do better or improve on, I'd be happy to 
 
 # What went really well and what could have gone better?
 
-If I'm honest, I feel like this assignment went quite well. I didn't run into any bugs or errors, which was quite nice. I feel like since week 4, we have kind of been doing the same assignment, but each week just keeps adding to it. It's like some of last week's stretch goals are now part of the MVP for this week's assignment.
+- If I'm honest, I feel like this assignment went quite well. I didn't run into any bugs or errors, which was quite nice. I feel like since week 4, we have kind of been doing the same assignment, but each week just keeps adding to it. It's like some of last week's stretch goals are now part of the MVP for this week's assignment.
+
+- I know I have reused some of my styling on my form and edit pages.js, but I did that with the thought that if I add something to one of the pages and not the other, I would then have to give it its own styling, so I might as well do it now. I can see how Tailwind would be helping with things like this to future-proof your app.
 
 # External sources
 
